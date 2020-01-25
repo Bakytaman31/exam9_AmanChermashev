@@ -1,0 +1,18 @@
+.ContactsCard {
+    display: flex;
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #ccc;
+    width: 50%;
+}
+
+.ContactsCard h3 {
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.ContactsCard img {
+    width: 150px;
+    height: 200px;
+}
