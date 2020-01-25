@@ -1,5 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {BrowserRouter} from "react-router-dom";
+import {createStore, applyMiddleware, compose} from "redux";
+import thunk from "redux-thunk";
+import {Provider} from "react-redux";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './App';
+import {contactsReducer} from "./store/reducers/contactsReducer/contactsReducer";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(contactsReducer, composeEnhancers(applyMiddleware(thunk)));
+
+const app = (
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>
+);
+
+
+ReactDOM.render(app, document.getElementById('root'));
