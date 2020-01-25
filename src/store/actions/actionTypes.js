@@ -1,0 +1,9 @@
+export const ON_CHANGE = 'ON_CHANGE';
+
+export const SHOW_MODAL = 'SHOW_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+
+export const INIT_CONTACT = 'EDIT_CONTACT';
+
+export const CONTACTS_REQUEST = 'CONTACTS_REQUEST';
+export const CONTACTS_SUCCESS = 'CONTACTS_SUCCESS';
